@@ -1,36 +1,22 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: ECMAScript® embedded systems
+description: Learn about interacting with hardware, IoT, and more with JS on Things!
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Learn about interacting with hardware, IoT, and more with JS on Things!
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: API Overview
+      link: /api
       icon: right-arrow
       variant: primary
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Read about TC53
+      link: https://ecma-international.org/technical-committees/tc53/
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+ ECMAScript Embedded Systems API Specification defines APIs for use on embedded systems. Embedded systems are far more diverse than personal computers, smartphones, and web servers where ECMAScript is most widely used.
+ It is not enough for these APIs to support the features embedded systems have in common. To be truly useful, they must allow access to the unique hardware capabilities of each embedded system.
 
-## Next steps
-
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+ This Standard is influenced by the Extensible Web Manifesto. It aims to provide low-level APIs that do things — primarily related to hardware and communication — that the ECMAScript language cannot do by itself. These low-level APIs are functional, simple, and efficient. The APIs may be used directly. However, it is expected that many developers will interact with them indirectly through higher-level modules and frameworks that build upon the low-level APIs. This layered approach keeps the low-level APIs small and focused while allowing a variety of uses and API styles to be built upon them.
