@@ -83,6 +83,9 @@ export default defineConfig({
       autogenerate: {
         directory: 'guides'
       }
+    }, {
+      label: 'Glossary',
+      link: "/glossary"
     }]
   }), tailwind({
     applyBaseStyles: false
