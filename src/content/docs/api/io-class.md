@@ -15,27 +15,29 @@ Creates a new `IO` object instance.
 IO(options)
 ```
 
-If the constructor requires a resource that is already in use — whether by a script or the native [host](/glossary/#host) — an [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) exception is thrown.
-
 #### Parameters
 
 `options`
 
 An object of properties used to construct the class. The `options` object contains the specification of the hardware resources to be used by the instance. The following are defined by this abstract class: 
 
-> `format`: a string that indicates the type of data used by the read and write methods. IO types may choose to support one or more of the following and may define others.
+> `format` (optional): a string that indicates the type of data used by the read and write methods. IO types may choose to support one or more of the following and may define others.
 >
 > - `number` - an ECMAScript number value, typically used for bytes
-> - `buffer` - a Byte Buffer. For buffer types with defined `byteOffset` and `byteLength` properties, these restrict the bytes accessed in views. Implementations always allocate [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) instances for return values.
+> - `buffer` - a [`Byte Buffer`](/glossary/byte-buffer). For buffer types with defined `byteOffset` and `byteLength` properties, these restrict the bytes accessed in views. Implementations always allocate [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) instances for return values.
 > - `object` - an ECMAScript object, for data representing a data structure (e.g. JSON)
 > - `string;ascii` - an ECMAScript string, for reading from and writing to IO using 7-bit ASCII data
 > - `string;utf8` - an ECMAScript string, for reading from and writing to IO using UTF-8 formatted data
 > 
-> `onReadable`: A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the instance has data available to read, which can be retrieved using the `read` method.
+> `onReadable` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the instance has data available to read, which can be retrieved using the `read` method.
 >
-> `onWritable`: A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the instance can accept more data for output, which can be sent using the `write` method.
+> `onWritable` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the instance can accept more data for output, which can be sent using the `write` method.
 >
-> `onError`: A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when a non-recoverable error occurs. The function may be passed an [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) depending on the IO type.
+> `onError` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when a non-recoverable error occurs. The function may be passed an [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) depending on the IO type.
+
+#### Exceptions
+
+If the constructor requires a resource that is already in use — whether by a script or the native [host](/glossary/#host) — an [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) exception is thrown.
 
 ## Instance Properties
 
@@ -80,7 +82,7 @@ A function that executes when the data has been read. It will always be last for
 
 `sizeOrBuffer`
 
-When the [`format`](#format) property is `"buffer"`, the method accepts this argument that is a `Number` or `Byte Buffer`.
+When the [`format`](#format) property is `"buffer"`, the method accepts this argument that is a `Number` or [`Byte Buffer`](/glossary/byte-buffer).
 When it is a `Number`, `read` allocates the result as an ArrayBuffer with up to as many bytes as the Number argument.
 When it is a `Byte Buffer`, `read` fills in as many bytes as possible and the result is the number of bytes read as a `Number`.
 
@@ -109,7 +111,7 @@ write(data, callbackFn)
 `data`
 
 The type of `data` accepted by this method depends on the value of the [`format`](#format) property.
-When the [`format`](#format) property is `"buffer"`, the method accepts a `Byte Buffer`.
+When the [`format`](#format) property is `"buffer"`, the method accepts a [`Byte Buffer`](/glossary/byte-buffer).
 
 `callbackFn`
 

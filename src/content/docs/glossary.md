@@ -3,6 +3,16 @@ title: Glossary
 description: A set of common terms and jargon used to define the ECMA-419 APIs
 ---
 
+## Byte Buffer
+
+An instance of the following JavaScript types:
+
+- [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (resizable or not)
+- [`SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) (growable or not)
+- [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+- [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
+- [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+
 ## GPIO
 
 General purpose input and output: electrical [pins](/glossary/#pins) which can be configured for various purposes.
