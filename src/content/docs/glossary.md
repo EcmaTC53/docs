@@ -3,6 +3,10 @@ title: Glossary
 description: A set of common terms and jargon used to define the ECMA-419 APIs
 ---
 
+## Analog
+
+In an electrical signal, existing in a continuous range, as opposed to the discrete ranges of [digital](#digital).
+
 ## Byte Buffer
 
 An instance of the following JavaScript types:
@@ -12,6 +16,10 @@ An instance of the following JavaScript types:
 - [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 - [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
 - [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+
+## Digital
+
+In an electrical signal, existing at binary values: on or off, zero or one. This can be used simply, e.g. on/off states of a switch or light, or digital signals can be toggled very quickly to encode complex messaging with communication protocols.
 
 ## GPIO
 
@@ -36,6 +44,14 @@ The value of a pin specifier is [host](/glossary/#host)-dependent. It is often a
 A port specifier is a JavaScript value used by [IO classes](/api/io-class/) to refer to a hardware interface. Port specifier values are defined by the [host](/glossary/#host); usually either a number or string.
 
 For example, consider a microcontroller may support two [serial](/glossary/#serial) connections, each with different capabilities that may be configured to be available on a set of [pins](/glossary/#pins); the port specifier indicates which serial connection to use.
+
+## Pull-up
+
+Ensures that given no input, the circuit assumes a default value, which is pulled high.
+
+## Pull-down
+
+Ensures that given no input, the circuit assumes a default value, which is pulled low.
 
 ## RX
 

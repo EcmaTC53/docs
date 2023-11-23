@@ -4,7 +4,7 @@ description:  An [IO class](/api/io-class) that represents an analog input sourc
 
 ---
 
-An [IO class](/api/io-class) that represents an analog input source
+An [IO class](/api/io-class) that represents an [analog](/glossary/#analog) input source
 
 ## Constructor
 
@@ -20,7 +20,7 @@ Analog(options)
 
 `options`
 
-An object of properties used to construct the class. This includes properties of the [`IO Class Pattern`](/api/io-class), as well as the following:
+An object of properties used to construct the class.
 
 > `pin` - a [pin specifier](/glossary/#pin-speficier) indicating the analog input pin.
 >
