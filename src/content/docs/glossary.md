@@ -69,6 +69,11 @@ Ensures that given no input, the circuit assumes a default value, which is pulle
 
 Ensures that given no input, the circuit assumes a default value, which is pulled low.
 
+## PWM
+
+Pulse-width modulation: a hardware communication protocol where there is a [digital](#digital) signal fluctuating between values at a set period, and the message is encoded by changing the percentage of that period in which the signal stays at one of the values. This can be used to approximate an [analog](#analog) signal on a pin which only supports digital signaling.
+A common application is in motor controllers, mapping a servo motor position to the percentage of the time a signal is held high.
+
 ## RX
 
 Receive: the wire in a [UART](/glossary/#uart) interface which receives data from the controlled device.
