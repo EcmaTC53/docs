@@ -72,7 +72,7 @@ read(sizeOrBuffer, callbackFn)
 callbackFn(error, data)
 ```
 
-A function that executes when the data has been read. It will always be last for asynchronous implementations that accept additional arguments.
+For asynchronous classes, a function that executes when the data has been read. It will always be last for asynchronous implementations that accept additional arguments.
 
 > `error`
 >   The first argument to the completion callback is always a result code. A value of null indicates success; an Error object indicates failure.
@@ -123,9 +123,6 @@ A function that executes when the data has been written. It will always be last 
 
 > `error`
 >   The first argument to the completion callback is always a result code. A value of null indicates success; an [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object indicates failure.
->
-> `data`
->   The same expectations of the return value for synchronous reads.
 
 #### Return value
 

@@ -45,7 +45,7 @@ close(callbackFn)
 
 `callbackFn`
 
-A function that executes when the close process has completed.
+For asynchronous classes, a function that executes when the close process has completed.
 
 > `result`
 >   The first argument to the completion callback is always a result code. A value of null indicates success; an Error object indicates failure.

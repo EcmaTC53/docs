@@ -33,6 +33,10 @@ General purpose input and output: electrical [pins](/glossary/#pins) which can b
 
 Provides the runtime environment for the execution of scripts, as defined by the [ECMAScript language specification](https://262.ecma-international.org/#sec-hosts-and-implementations).
 
+## I<sup>2</sup>C
+
+[Inter-Integrated Circuit](http://en.wikipedia.org/wiki/I%C2%B2C): a [controller/peripheral](https://learn.sparkfun.com/tutorials/i2c#controller-peripheral) communication protocol that allows one device to control one or more connected devices through two wires, a clock signal (SCL) to keep the components in sync and a data line (SDA).
+
 ## LED
 
 Light-emitting diode
