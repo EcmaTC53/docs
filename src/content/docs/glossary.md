@@ -7,6 +7,10 @@ description: A set of common terms and jargon used to define the ECMA-419 APIs
 
 In an electrical signal, existing in a continuous range, as opposed to the discrete ranges of [digital](#digital).
 
+## Bitmask
+
+Data used in [bitwise operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) made up of a series of 0s and 1s (a.k.a bit field), often used in configuration to indicate setting various options on or off.
+
 ## Byte Buffer
 
 An instance of the following JavaScript types:
@@ -28,6 +32,14 @@ General purpose input and output: electrical [pins](/glossary/#pins) which can b
 ## Host
 
 Provides the runtime environment for the execution of scripts, as defined by the [ECMAScript language specification](https://262.ecma-international.org/#sec-hosts-and-implementations).
+
+## LED
+
+Light-emitting diode
+
+## Open drain
+
+An output pin is a digital signal that is connected to the ground. Low signals stay connected to ground. High signals will short the pin to the power source and leave it floating.
 
 ## Pins
 

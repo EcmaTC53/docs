@@ -26,9 +26,9 @@ An object of properties used to construct the class.
 >
 > `mode` - A value indicating the mode of the IO. This value may be one of the [static properties](#static-properties) on the class: `Digital.Input`, `Digital.InputPullUp`, `Digital.InputPullDown`, `Digital.InputPullUpDown`, `Digital.Output`, `Digital.OutputDrain`
 >
-> `edge` - A value indicating the conditions for invoking the `onReadable` callback. This value may be one of the [static properties](#static-properties) on the class: `Digital.Rising`, `Digital.Falling`, `Digital.Rising + Digital.Falling`
+> `edge` - A value indicating the conditions for invoking the `onReadable` callback. This value may be one of the [static properties](#static-properties) on the class: `Digital.Rising`, `Digital.Falling`, `Digital.Rising | Digital.Falling`
 >
-> `onReadable` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the input value changes depending on the `edge` property, which can be retrieved using the `read` method.
+> `onReadable()` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when the input value changes depending on the `edge` property, which can be retrieved using the `read` method.
 
 #### Exceptions
 
@@ -38,15 +38,33 @@ If the constructor requires a resource that is already in use — whether by a s
 
 ### `Input`
 
+The IO class will invoke the `onReadable` callback based on the `edge` value and accepts the [`read` method](#read). It will read whatever logic level is connected to it and ‘float’ to random high or low values if nothing is connected
+
 ### `InputPullUp`
 
+An input peripheral with the default value as "pulled high", or 1, when nothing else is connected.
+
 ### `InputPullDown`
+
+An input peripheral with the default value as "pulled low", or 0, when nothing else is connected.
 
 ### `InputPullUpDown`
 
 ### 'Output'
 
+The IO class accepts the [`write` method](#write) to set the configured pin in push-pull mode: low (0) or high (1).
+
 ### `OutputDrain`
+
+The IO class accepts the [`write` method](#write) to set the configured pin in [open drain](/glossary/#open-drain) mode: low (0) or floating disconnected (1).
+
+### `Rising`
+
+The digital signal is transitioning from 0 to 1.
+
+### `Falling`
+
+The digital signal is transitioning from 1 to 0.
 
 ## Instance Properties
 
@@ -91,6 +109,45 @@ The class can be imported from the `embedded` namespace or found on the [host](/
 ```js
 import Digital from "embedded:io/digital";
 const Digital = device.io.Digital;
+```
+
+### Hello Blinky
+
+This example instantiates a digital output to control an [LED](/glossary/#led) based on the [global `device` pin names](/api/host-provider) and toggle it on/off every 200 milliseconds using `System.setInterval`.
+
+```js
+const led = new device.io.Digital({
+   pin: device.pin.led,
+   mode: Digital.Output,
+});
+led.write(1);
+
+let state = 0;
+System.setInterval(() => {
+	led.write(state);
+	state = state == 0 ? 1 : 0;
+}, 200);
+```
+
+### Button-controlled LED
+
+This example instantiates a digital input to read a push button to toggle a digital output [LED](/glossary/#led) based on the [global `device` pin names](/api/host-provider). The button is configured to trigger the `onReadable` callback when has been pushed (falling) and released (rising).
+
+```js
+const led = new device.io.Digital({
+   pin: device.pin.led,
+   mode: Digital.Output,
+});
+
+// button
+new device.io.Digital({
+    pin: device.pin.button,
+    mode: Digital.InputPullUp,
+    edge: Digital.Rising | Digital.Falling,
+    onReadable() {
+        led.write(this.read());
+    }
+});
 ```
 
 ## Specifications
