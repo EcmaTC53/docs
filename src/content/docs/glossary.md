@@ -7,6 +7,10 @@ description: A set of common terms and jargon used to define the ECMA-419 APIs
 
 In an electrical signal, existing in a continuous range, as opposed to the discrete ranges of [digital](#digital).
 
+## Big-endian
+
+[Endianness](https://en.wikipedia.org/wiki/Endianness) system that stores the [most significant byte](https://en.wikipedia.org/wiki/Most_significant_byte) of a [word](https://en.wikipedia.org/wiki/Word_(data_type)) at the smallest memory address and the [least significant byte](https://en.wikipedia.org/wiki/Least_significant_byte) at the largest memory address.
+
 ## Bitmask
 
 Data used in [bitwise operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) made up of a series of 0s and 1s (a.k.a bit field), often used in configuration to indicate setting various options on or off.
@@ -40,6 +44,10 @@ Provides the runtime environment for the execution of scripts, as defined by the
 ## LED
 
 Light-emitting diode
+
+## Little-endian
+
+[Endianness](https://en.wikipedia.org/wiki/Endianness) system that stores the [most significant byte](https://en.wikipedia.org/wiki/Most_significant_byte) of a [word](https://en.wikipedia.org/wiki/Word_(data_type)) at the largest memory address and the [least significant byte](https://en.wikipedia.org/wiki/Least_significant_byte) at the smallest memory address.
 
 ## Open drain
 
@@ -81,6 +89,10 @@ Receive: the wire in a [UART](/glossary/#uart) interface which receives data fro
 ## Serial
 
 Also known as [UART](/glossary/#uart): a communication protocol that uses receive ([RX](/glossary/#rx)) and transmit ([TX](/glossary/#tx)) lines to interface with hardware.
+
+## SMBus
+
+System management bus: an extension of the [I<sup>2</sup>C protocol](#i2c) defined to communicate with low-bandwidth devices with stricter requirements in clock frequency range (10kHz to 100 kHz), voltage, and timing.
 
 ## TX
 
