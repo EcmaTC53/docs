@@ -81,7 +81,7 @@ const PulseCount = device.io.PulseCount;
 
 ### Rotary encoder
 
-This example instantiates a pulse counter to monitor a rotary encorder and log the current count when it changes.
+This example instantiates a pulse counter to monitor a rotary encoder and log the current count when it changes.
 
 ```js
 new device.io.PulseCount({

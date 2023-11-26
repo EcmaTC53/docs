@@ -94,6 +94,10 @@ Also known as [UART](/glossary/#uart): a communication protocol that uses receiv
 
 System management bus: an extension of the [I<sup>2</sup>C protocol](#i2c) defined to communicate with low-bandwidth devices with stricter requirements in clock frequency range (10kHz to 100 kHz), voltage, and timing.
 
+## SPI
+
+Serial Peripheral Interface; a [controller/peripheral](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi#receiving-data) communication protocol that provides synchronous [serial](#serial) data transfer. Requires a minimum of 3 lines in addition to the power connections.
+
 ## TX
 
 Transmit: the wire in a [UART](/glossary/#uart) interface which sends data to the controlled device.
