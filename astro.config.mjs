@@ -4,6 +4,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://ecmatc53.github.io/',
+  base: '/docs',
   integrations: [starlight({
     title: 'ECMA-419 Docs',
     social: {

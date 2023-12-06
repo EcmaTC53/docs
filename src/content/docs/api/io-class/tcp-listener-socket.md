@@ -1,10 +1,10 @@
 ---
 title: TCP Listener Socket
-description:  TBD 
+description: An [IO class](/api/io-class/) that listens for and accepts incoming [TCP](/glossary/#tcp) connection requests.
 
 ---
 
-## TBD
+An [IO class](/api/io-class/) that listens for and accepts incoming [TCP](/glossary/#tcp) connection requests.
 
 
 
