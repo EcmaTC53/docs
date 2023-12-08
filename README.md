@@ -44,3 +44,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+## Contributing
+
+**Authors of contributions from non-Ecma member organizations must sign the [Contributor License Agreement](https://embedded.js.org/cla)**
