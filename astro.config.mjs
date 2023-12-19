@@ -16,6 +16,17 @@ export default defineConfig({
     customCss: [
       './src/styles/tailwind.css',
     ],
+    favicon: "/favicon.png",
+    head: [
+      {
+        tag: "link",
+        attrs: {
+          rel: "icon",
+          href: "/favicon.ico",
+          sizes: "32x32",
+        }
+      }
+    ],
     sidebar: [{
       label: 'API',
       items: [{
