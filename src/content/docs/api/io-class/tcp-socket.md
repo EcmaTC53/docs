@@ -28,9 +28,9 @@ An object of properties used to construct the class.
 >
 > `address` - A string with the [IP address](/glossary/#ip) of the remote endpoint to connect to. Optional if the `from` property is set.
 >
-> `noDelay` (optional) - A boolean indicating whether to disable [Nagle's algorithm]() on the socket. This is equivalent to the [`TCP_NODELAY` option in BSD sockets](). Defaults to false.
+> `noDelay` (optional) - A boolean indicating whether to disable [Nagle's algorithm](https://en.wikipedia.org/wiki/Nagle%27s_algorithm) on the socket. This is equivalent to the [`TCP_NODELAY` option in BSD sockets](https://www.man7.org/linux/man-pages/man7/tcp.7.html). Defaults to false.
 >
-> `keepAlive` (optional) - A number of milliseconds specifying the [keep-alive interval]() of the socket. Defaults to disabling the keep-alive capability.
+> `keepAlive` (optional) - A number of milliseconds specifying the [keep-alive interval](https://en.wikipedia.org/wiki/Keepalive#TCP_keepalive) of the socket. Defaults to disabling the keep-alive capability.
 >
 > `from` (optional) - An existing `TCP` socket instance from which the native socket instance is taken to use with the newly created socket instance. Intended to be used with a TCP [`Listener`](/api/io-class/tcp-listener). The original instance is closed as ownership of the native socket is tranferred to the new instance.
 >
