@@ -26,7 +26,7 @@ An object of properties used to construct the class.
 >
 > `address` (optional) - A string with the [IP address](/glossary/#ip) of the network interface to bind to, defaults to "::" for IPv6 or "0.0.0.0" for IPv4.
 >
-> `onReadable` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when one or more new connection requests are received by the socket, which can be retrieved using the `read` method. The `requests` argument indicates the total number of pending connection requests.
+> `onReadable(requests)` (optional): A [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) that is invoked when one or more new connection requests are received by the socket, which can be retrieved using the `read` method. The `requests` argument indicates the total number of pending connection requests.
 
 #### Exceptions
 

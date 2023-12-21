@@ -74,11 +74,11 @@ read(buffer)
 
 `byteLength`
 
-Accepted when the [`format`](#forma) is a `"buffer"`, the number of bytes to read into the returned [Byte Buffer](/glossary/#byte-buffer).
+Accepted when the [`format`](#format) is a `"buffer"`, the number of bytes to read into the returned [Byte Buffer](/glossary/#byte-buffer).
 
 `buffer`
 
-Accepted when the [`format`](#forma) is a `"buffer"`, a pre-allocated [Byte Buffer](/glossary/#byte-buffer) for the instance to fill.
+Accepted when the [`format`](#format) is a `"buffer"`, a pre-allocated [Byte Buffer](/glossary/#byte-buffer) for the instance to fill.
 
 #### Return value
 
@@ -101,11 +101,11 @@ write(buffer)
 
 `byteValue`
 
-Accepted when the [`format`](#forma) is a `"number"`, a byte value to send to the peripheral.
+Accepted when the [`format`](#format) is a `"number"`, a byte value to send to the peripheral.
 
 `buffer`
 
-Accepted when the [`format`](#forma) is a `"buffer"`, a [Byte Buffer](/glossary/#byte-buffer) of data to send to the peripheral.
+Accepted when the [`format`](#format) is a `"buffer"`, a [Byte Buffer](/glossary/#byte-buffer) of data to send to the peripheral.
 
 #### Exceptions
 
