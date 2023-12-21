@@ -41,6 +41,10 @@ Provides the runtime environment for the execution of scripts, as defined by the
 
 [Inter-Integrated Circuit](http://en.wikipedia.org/wiki/I%C2%B2C): a [controller/peripheral](https://learn.sparkfun.com/tutorials/i2c#controller-peripheral) communication protocol that allows one device to control one or more connected devices through two wires, a clock signal (SCL) to keep the components in sync and a data line (SDA).
 
+## IP
+
+[Internet Protocol](https://en.wikipedia.org/wiki/Internet_Protocol): the network layer communications protocol for sending data across networks to establish the Internet.
+
 ## LED
 
 Light-emitting diode
@@ -97,6 +101,10 @@ System management bus: an extension of the [I<sup>2</sup>C protocol](#i2c) defin
 ## SPI
 
 Serial Peripheral Interface; a [controller/peripheral](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi#receiving-data) communication protocol that provides synchronous [serial](#serial) data transfer. Requires a minimum of 3 lines in addition to the power connections.
+
+## TCP
+
+Transmission Control Protocol: a network protocol that allows two hosts to connect and exchange data with guaranteed ordering upon delivery.
 
 ## TX
 
