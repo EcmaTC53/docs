@@ -41,6 +41,38 @@ Provides the runtime environment for the execution of scripts, as defined by the
 
 [Inter-Integrated Circuit](http://en.wikipedia.org/wiki/I%C2%B2C): a [controller/peripheral](https://learn.sparkfun.com/tutorials/i2c#controller-peripheral) communication protocol that allows one device to control one or more connected devices through two wires, a clock signal (SCL) to keep the components in sync and a data line (SDA).
 
+## IO Bus
+
+Object of two or more pins used to implement a communication protocol such as [Serial](/api/io-class/serial), [SPI](/api/io-class/spi), or [I<sup>2</sup>C](/api/io-class/i2c).
+
+If there is more than one IO bus for a protocol, one may be designated as the `default` bus of that type.
+
+```js
+// example host implementation
+
+const A = {
+    in: 12,
+    out: 13,
+    clock: 14,
+    select: 15,
+    hz: 10_000_000,
+};
+
+const B = {
+    in: 0,
+    out: 1,
+    clock: 2,
+    select: 3,
+    hz: 20_000_000,
+};
+
+device.spi = {
+    A,
+    B,
+    default: B,
+};
+```
+
 ## IP
 
 [Internet Protocol](https://en.wikipedia.org/wiki/Internet_Protocol): the network layer communications protocol for sending data across networks to establish the Internet.

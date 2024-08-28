@@ -50,7 +50,9 @@ An input peripheral with the default value as "pulled low", or 0, when nothing e
 
 ### `InputPullUpDown`
 
-### 'Output'
+An input peripheral with the default value as VCC/2, or half of the standard voltage (typically 3.3v).
+
+### `Output`
 
 The IO class accepts the [`write` method](#write) to set the configured pin in push-pull mode: low (0) or high (1).
 
