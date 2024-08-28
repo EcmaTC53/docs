@@ -71,11 +71,11 @@ Object of default [Real-time clock constructor options](/api/real-time-clock-cla
 
 Object of networking-related constructor options.
 
-#### `dns.resolver`
+#### `network.dns.resolver`
 
 Object of default [Domain Name Resolver constructor options](/api/dns-resolver-class).
 
-#### `interface`
+#### `network.interface`
 
 Object of default [Network Interface constructor options](/api/network-interface-class).
 
@@ -83,35 +83,35 @@ Object of default [Network Interface constructor options](/api/network-interface
 console.log(device.network.interface.Ethernet0);
 ```
 
-#### `ntp.client`
+#### `network.ntp.client`
 
 Object of default [NTP Client constructor options](/api/io-class/ntp-client-class).
 
-#### `http.client`
+#### `network.http.client`
 
 Object of default [HTTP Client constructor options](/api/io-class/http-client-class).
 
-#### `http.server`
+#### `network.http.server`
 
 Object of default [HTTP Server constructor options](/api/io-class/http-server-class).
 
-#### `mqtt.client`
+#### `network.mqtt.client`
 
 Object of default [MQTT Client constructor options](/api/io-class/mqtt-client-class).
 
-#### `mqtts.client`
+#### `network.mqtts.client`
 
 Object of default secure [MQTT Client constructor options](/api/io-class/mqtt-client-class).
 
-#### `tls.client`
+#### `network.tls.client`
 
 Object of default [TLS Client constructor options](/api/io-class/tls-client-socket).
 
-#### `ws.client`
+#### `network.ws.client`
 
 Object of default [WebSocket Client constructor options](/api/io-class/websocket-client-class).
 
-#### `wss.client`
+#### `network.wss.client`
 
 Object of default secure [WebSocket Client constructor options](/api/io-class/websocket-client-class).
 
