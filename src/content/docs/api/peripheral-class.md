@@ -60,6 +60,8 @@ Follows the same rules as the `options` used in the [constructor](#constructor).
 
 ## Examples
 
+This is an abstract class that is not instantiated directly. The examples that follow are demonstrations of potential implementations.
+
 The following code is an example of using an I<sup>2</sup>C peripheral:
 
 ```js
