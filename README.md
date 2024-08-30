@@ -62,6 +62,8 @@ To get started:
 1. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to `EcmaTC53/docs:main`
 1. Wait for review.
 
+For new pages, see `src/contents/docs/api/_example-template.md` for the recommended structure for API documentation.
+
 If you would like to preview your changes:
 
 1. Make sure [Node.js](https://nodejs.org/en/download/package-manager) and [pnpm](https://pnpm.io/installation) are available in your development environment.
