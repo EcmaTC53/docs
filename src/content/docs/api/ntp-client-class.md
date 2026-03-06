@@ -1,11 +1,69 @@
 ---
-title: NTP Client Class Pattern
-description: TBD 
- 
+title: NTP Client Class
+description: A class for retrieving the current time from a network time source.
 ---
 
-## TBD
+The `NTP` client retrieves the current time from a network time source using the Network Time Protocol (NTP).
 
-_This class has not been documented yet. If you would like to contribute to these docs, use the "Edit page" link below or check out the project's [GitHub repository](https://github.com/ecmatc53/docs)._
+```js
+import NTP from "embedded:network/ntp/client";
+```
 
+## Constructor
 
+### `NTP(options)`
+
+Creates a new `NTP` client object instance.
+
+```js
+NTP(options)
+```
+
+#### Parameters
+
+`options`
+
+> `socket` - A `UDP` class constructor options object.
+>
+> `servers` - An array of one or more strings indicating the NTP hosts to use.
+
+## Instance Methods
+
+### `getTime(callback)`
+
+Initiates a time synchronization operation.
+
+```js
+getTime(callback)
+```
+
+#### Parameters
+
+`callback`
+
+```js
+callback(error, time)
+```
+
+> `error` - An `Error` object if the operation failed, or `null` if successful.
+>
+> `time` - The synchronized time as an ECMAScript number value.
+
+## Examples
+
+```js
+import NTP from "embedded:network/ntp/client";
+
+const ntp = new NTP({
+  servers: ["pool.ntp.org"]
+});
+
+ntp.getTime((error, time) => {
+  if (error) return console.error("NTP failed");
+  console.log(`Current time: ${new Date(time)}`);
+});
+```
+
+## Specifications
+
+[NTP Client](https://419.ecma-international.org/#-19-ntp-client)
