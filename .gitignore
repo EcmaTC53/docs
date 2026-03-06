@@ -26,3 +26,5 @@ GEMINI.md
 ./docs/
 update_links.sh
 update_specs.py
+AGENTS.md
+docs/

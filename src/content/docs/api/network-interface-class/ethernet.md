@@ -1,11 +1,32 @@
 ---
-title: Ethernet Network Interface
-description:  TBD 
-
+title: Ethernet
+description: A network interface class for Ethernet connections.
 ---
 
-## TBD
+The `Ethernet` class provides access to an Ethernet network interface. It is a subclass of the [`Network Interface Class Pattern`](/api/network-interface-class).
 
-_This class has not been documented yet. If you would like to contribute to these docs, use the "Edit page" link below or check out the project's [GitHub repository](https://github.com/ecmatc53/docs)._
+```js
+import Ethernet from "embedded:network/interface/ethernet";
+```
 
+## Constructor
 
+### `Ethernet(options)`
+
+Creates a new `Ethernet` object instance.
+
+```js
+Ethernet(options)
+```
+
+#### Parameters
+
+`options`
+
+An object of properties used to construct the class.
+
+> `port` (optional) - A port specifier that indicates the logical network interface to bind to.
+
+## Specifications
+
+[Ethernet Network Interface](https://419.ecma-international.org/#-17-network-interface-class-pattern-ethernet-network-interface)
