@@ -19,3 +19,10 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# agent/AI specific files
+AGENTS.md
+GEMINI.md
+docs/
+update_links.sh
+update_specs.py
