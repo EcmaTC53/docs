@@ -61,6 +61,103 @@ Creates a directory at the specified path.
 
 Returns an iterator that enumerates the contents of a directory.
 
+### `readLink(path)`
+
+Reads the target of a symbolic link.
+
+```js
+readLink(path)
+```
+
+#### Parameters
+
+`path` - A string indicating the path to the symbolic link.
+
+#### Return Value
+
+A string representing the target of the symbolic link.
+
+### `CheckPath(path)`
+
+Checks if a path is valid and accessible.
+
+```js
+CheckPath(path)
+```
+
+#### Parameters
+
+`path` - A string indicating the path to check.
+
+### `createLink(path, target)`
+
+Creates a symbolic link at `path` pointing to `target`.
+
+```js
+createLink(path, target)
+```
+
+#### Parameters
+
+`path` - A string indicating where to create the link.
+>
+> `target` - A string indicating the target of the link.
+
+### `[Symbol.iterator]()`
+
+Returns an iterator that yields entries in the directory.
+
+```js
+[Symbol.iterator]()
+```
+
+## Directory Iterator Class
+
+### `constructor(directory[, path])`
+
+Creates a new directory iterator instance.
+
+```js
+constructor(directory, path)
+```
+
+#### Parameters
+
+`directory` - The parent Directory instance.
+>
+> `path` (optional) - The starting path for iteration.
+
+### `next()`
+
+Returns the next entry in the directory.
+
+```js
+next()
+```
+
+#### Return Value
+
+An object with `done` and `value` properties.
+
+### `return()`
+
+Closes the iterator and releases resources.
+
+```js
+return()
+```
+
+## Home Directory Object
+
+The `Files` module provides access to the home directory, which is the default directory for user files.
+
+```js
+import files from "embedded:storage/files";
+
+// Access files in the user's home directory
+const config = files.openFile({ path: "config/settings.json" });
+```
+
 ## File Class Pattern
 
 ### `read(count, offset)`

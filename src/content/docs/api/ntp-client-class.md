@@ -29,6 +29,14 @@ NTP(options)
 
 ## Instance Methods
 
+### `close()`
+
+Closes the NTP client and releases any resources.
+
+```js
+close()
+```
+
 ### `getTime(callback)`
 
 Initiates a time synchronization operation.

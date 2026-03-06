@@ -67,7 +67,10 @@ export default defineConfig({
         collapsed: true
       }, {
         label: "DNS Resolver Class",
-        link: "/api/dns-resolver-class"
+        autogenerate: {
+          directory: "/api/dns-resolver-class"
+        },
+        collapsed: true
       }, {
         label: "NTP Client Class",
         link: "/api/ntp-client-class"
@@ -76,7 +79,10 @@ export default defineConfig({
         link: "/api/http-client-class"
       }, {
         label: "HTTP Server Class",
-        link: "/api/http-server-class"
+        autogenerate: {
+          directory: "/api/http-server-class"
+        },
+        collapsed: true
       }, {
         label: "WebSocket Client Class",
         link: "/api/websocket-client-class"

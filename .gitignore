@@ -23,6 +23,6 @@ pnpm-debug.log*
 # agent/AI specific files
 AGENTS.md
 GEMINI.md
-docs/
+./docs/
 update_links.sh
 update_specs.py
