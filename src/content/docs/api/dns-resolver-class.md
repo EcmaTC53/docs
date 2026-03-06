@@ -1,8 +1,38 @@
 ---
-title: DNS Resolver Class Pattern
-description: TBD
+title: Domain Name Resolver Class Pattern
+description: A class pattern for resolving DNS names to IP addresses.
 ---
 
-## TBD
+The `Domain Name Resolver Class Pattern` defines an interface for resolving hostnames to IP addresses.
 
-_This class has not been documented yet. If you would like to contribute to these docs, use the "Edit page" link below or check out the project's [GitHub repository](https://github.com/ecmatc53/docs)._
+## Instance Methods
+
+### `resolve(options[, callback])`
+
+Resolves a hostname to an IP address.
+
+```js
+resolve({ host }, callback)
+```
+
+#### Parameters
+
+`options`
+
+> `host` - A string containing the hostname to resolve.
+
+`callback`
+
+```js
+callback(error, name, address)
+```
+
+> `error` - An `Error` object if the operation failed, or `null` if successful.
+>
+> `name` - The hostname that was resolved.
+>
+> `address` - The resolved IP address as a string.
+
+## Specifications
+
+[Domain Name Resolver Class Pattern](https://419.ecma-international.org/#-18-domain-name-resolver-class-pattern)
