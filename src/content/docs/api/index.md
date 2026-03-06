@@ -23,7 +23,7 @@ The ECMA-419 specification defines a suite of APIs for JavaScript on embedded sy
 - [**HTTP Server**](/api/http-server-class): Web responses.
 - [**WebSocket Client**](/api/websocket-client-class): Real-time web communication.
 - [**MQTT Client**](/api/mqtt-client-class): Message queuing telemetry transport.
-- [**Persistent Storage**](/api/storage/files): Files, key-value pairs, and flash memory.
+- [**Persistent Storage**](/api/storage/): Files, key-value pairs, and flash memory.
 
 ## Host Provider
 
