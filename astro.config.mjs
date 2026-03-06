@@ -87,11 +87,17 @@ export default defineConfig({
         label: "WebSocket Client Class",
         link: "/api/websocket-client-class"
       }, {
-        label: "MQTT Client Class",
-        link: "/api/mqtt-client-class"
-      }, {
-        label: "Host Provider",
-        link: "/api/host-provider"
+         label: "MQTT Client Class",
+         link: "/api/mqtt-client-class"
+       }, {
+         label: "Persistent Storage",
+         autogenerate: {
+           directory: "/api/storage"
+         },
+         collapsed: true
+       }, {
+         label: "Host Provider",
+         link: "/api/host-provider"
       }, {
         label: "Provenance Sensor Class",
         link: "/api/provenance-sensor-class"
