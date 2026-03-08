@@ -1,15 +1,18 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://embedded.js.org/',
+  image: {
+    service: passthroughImageService(),
+  },
   integrations: [starlight({
     title: 'ECMA-419 Docs',
-    social: {
-      github: 'https://github.com/ecmatc53/docs'
-    },
+    social: [{
+      icon: 'github', href: 'https://github.com/ecmatc53/docs', label: 'GitHub'
+    }],
     editLink: {
       baseUrl: "https://github.com/ecmatc53/docs/edit/main/"
     },
@@ -87,17 +90,17 @@ export default defineConfig({
         label: "WebSocket Client Class",
         link: "/api/websocket-client-class"
       }, {
-         label: "MQTT Client Class",
-         link: "/api/mqtt-client-class"
-       }, {
-         label: "Persistent Storage",
-         autogenerate: {
-           directory: "/api/storage"
-         },
-         collapsed: true
-       }, {
-         label: "Host Provider",
-         link: "/api/host-provider"
+        label: "MQTT Client Class",
+        link: "/api/mqtt-client-class"
+      }, {
+        label: "Persistent Storage",
+        autogenerate: {
+          directory: "/api/storage"
+        },
+        collapsed: true
+      }, {
+        label: "Host Provider",
+        link: "/api/host-provider"
       }, {
         label: "Provenance Sensor Class",
         link: "/api/provenance-sensor-class"
